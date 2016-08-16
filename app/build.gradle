@@ -11,6 +11,20 @@ android {
         versionCode 1
         versionName "1.0"
     }
+    signingConfigs {
+        debug {
+            storeFile file("$rootProject.projectDir/key/dywx.jks")
+            storePassword "LarkPlayer"
+            keyAlias "LarkPlayer"
+            keyPassword "LarkPlayer"
+        }
+        release {
+            storeFile file("$rootProject.projectDir/key/dywx.jks")
+            storePassword "LarkPlayer"
+            keyAlias "LarkPlayer"
+            keyPassword "LarkPlayer"
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -24,5 +38,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.0.0'
     compile 'com.android.support:design:23.0.0'
-//    compile 'com.zhy:changeskin:1.0.0'
+    compile 'com.zhy:changeskin:3.0.0'
 }

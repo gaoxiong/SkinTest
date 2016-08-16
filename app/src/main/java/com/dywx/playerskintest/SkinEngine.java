@@ -50,21 +50,6 @@ public class SkinEngine {
         preloadedDrawables = ((LongSparseArray[]) object);
         drawableArrPreloadIntercepter = new DrawableArrPreloadIntercepter(SkinEngine.this, preloadedDrawables);
         preloadedDrawables[0] = drawableArrPreloadIntercepter;
-      } else if (object instanceof LongSparseArray) {
-        LongSparseArray preloadedDrawables = new LongSparseArray();
-        preloadedDrawables = ((LongSparseArray) object);
-        drawablePreloadIntercepter = new DrawablePreloadIntercepter(SkinEngine.this, preloadedDrawables);
-        preloadedDrawables = drawablePreloadIntercepter;
-      }
-
-      field = resourcesClz.getDeclaredField("sPreloadedColorDrawables");
-      field.setAccessible(true);
-      object = field.get(res);
-      if (object instanceof LongSparseArray) {
-        LongSparseArray preloadedColorDrawables = new LongSparseArray();
-        preloadedColorDrawables = ((LongSparseArray) object);
-        drawableColorPreloadIntercepter = new DrawableColorPreloadIntercepter(SkinEngine.this, preloadedColorDrawables);
-        preloadedColorDrawables = drawableColorPreloadIntercepter;
       }
     } catch (IllegalArgumentException e) {
       e.printStackTrace();

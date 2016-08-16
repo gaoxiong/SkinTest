@@ -5,6 +5,8 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 
+import com.zhy.changeskin.SkinManager;
+
 /**
  * Created by xgao on 12/8/2016.
  */
@@ -17,14 +19,14 @@ public class MyApplication extends Application {
     super.onCreate();
 
     instance = this;
-//    SkinManager.getInstance().init(this);
+    SkinManager.getInstance().init(this);
     try {
-      mSkinContext= this.getApplicationContext().createPackageContext("com.dywx.playerskincn",
+      mSkinContext= createPackageContext("com.dywx.playerskincn",
         Context.CONTEXT_IGNORE_SECURITY | Context.CONTEXT_INCLUDE_CODE);
     } catch (PackageManager.NameNotFoundException e) {
       e.printStackTrace();
     }
-    SkinEngine.getInstances().init(mSkinContext.getResources());
+    SkinEngine.getInstances().init(getResources());
   }
 
   /**
@@ -36,11 +38,19 @@ public class MyApplication extends Application {
   }
 
   /**
+   * @return the main context of the Application
+   */
+  public static Context getPluginContext()
+  {
+    return mSkinContext;
+  }
+
+  /**
    * @return the main resources from the Application
    */
   public static Resources getAppResources()
   {
-    return mSkinContext.getResources();
-//    return instance.getResources();
+//    return mSkinContext.getResources();
+    return instance.getResources();
   }
 }

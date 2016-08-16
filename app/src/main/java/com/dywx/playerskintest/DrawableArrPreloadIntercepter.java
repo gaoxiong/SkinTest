@@ -19,7 +19,7 @@ public class DrawableArrPreloadIntercepter extends LongSparseArray<ConstantState
 
   public DrawableArrPreloadIntercepter(SkinEngine skinEngine, LongSparseArray<ConstantState>[] preloadCache) {
     mSkinEngine = skinEngine;
-    mOldPreloadCache=preloadCache.clone();
+    mOldPreloadCache = preloadCache.clone();
   }
 
   public void add(Resources resources, int resId) {
