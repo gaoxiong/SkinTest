@@ -269,7 +269,7 @@ public class MainActivity extends BaseSkinActivity
       String pkgName = info.packageName;
       //判断这个apk是否是我们应用程序的插件
       if (info.sharedUserId != null && info.sharedUserId.equals(sharedUsedId) && !pkgName.equals(context.getPackageName())) {
-        sourceDir = info.applicationInfo.dataDir;
+        sourceDir = info.applicationInfo.sourceDir;
         PluginWrapper pluginWrapper = new PluginWrapper(sourceDir, pkgName);
         if (mPluginWrapperArrayList == null) {
           mPluginWrapperArrayList = new ArrayList<>();
