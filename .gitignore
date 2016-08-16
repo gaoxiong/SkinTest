@@ -1,0 +1,6 @@
+*.apk
+*.iml
+.gradle/
+.idea/
+*.swp
+build/
