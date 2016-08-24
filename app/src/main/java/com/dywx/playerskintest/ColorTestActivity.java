@@ -1,9 +1,8 @@
 package com.dywx.playerskintest;
 
-import android.app.Activity;
 import android.os.Bundle;
 
-import com.zhy.changeskin.base.BaseSkinActivity;
+import com.dywx.playerskintest.skin.BaseSkinActivity;
 
 public class ColorTestActivity extends BaseSkinActivity {
 

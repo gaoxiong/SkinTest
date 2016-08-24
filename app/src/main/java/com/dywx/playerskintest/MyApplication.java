@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
 
-import com.zhy.changeskin.SkinManager;
+import com.dywx.playerskintest.skin.SkinManager;
 
 /**
  * Created by xgao on 12/8/2016.

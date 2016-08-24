@@ -20,8 +20,9 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.zhy.changeskin.SkinManager;
-import com.zhy.changeskin.base.BaseSkinActivity;
+
+import com.dywx.playerskintest.skin.BaseSkinActivity;
+import com.dywx.playerskintest.skin.SkinManager;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
